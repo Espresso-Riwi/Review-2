@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package activity9;
 
-/**
- *
- * @author javayspringboot
- */
+import java.util.ArrayList;
+
 public class Activity9 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+
+            public static void main(String[] args) {
+        ArrayList<Formater> list = new ArrayList<>();
+        list.add(new UpperCase());
+        list.add(new LowerCase());
+        list.add(new TitleCase());
+
+        String text = "hello java world";
+        for (Formater f : list) {
+            System.out.println(f.format(text));
+        }
+    }
+
     }
     
-}
