@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        activity12();
+        activity13();
 
     }
 
@@ -49,7 +49,10 @@ public class Main {
     }
 
     static public void activity4(){
-
+        CsvProcess csvProcess = new CsvProcess();
+        JsonProcess jsonProcess = new JsonProcess();
+        csvProcess.execute();
+        jsonProcess.execute();
     }
 
     static public void activity5(){
@@ -224,7 +227,12 @@ public class Main {
     }
 
     static public void activity13(){
+        StudentRepo studentRepo = new StudentRepo();
+        Student s1 = new Student("123", "Carlos");
 
+        studentRepo.save(s1);
+        System.out.println(studentRepo.findById(s1.id).name);
+        studentRepo.delete(s1.id);
     }
 
     static public void activity14(){

@@ -11,4 +11,5 @@ public abstract class Process {
     void finish(){
         System.out.println("Print");
     }
+
 }
