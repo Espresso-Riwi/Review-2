@@ -1,0 +1,5 @@
+interface Bonusable {
+
+    double bonus();
+
+}
