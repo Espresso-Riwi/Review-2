@@ -1,12 +1,9 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        activity13();
+        activity14();
 
     }
 
@@ -236,7 +233,26 @@ public class Main {
     }
 
     static public void activity14(){
+        ArrayList<Task> tasks = new ArrayList<>();
+        tasks.add(new Task("1", "Depends", 1));
+        tasks.add(new Task("2", "Si", 9));
+        tasks.add(new Task("3", "No", 6));
+        tasks.add(new Task("4", "Who", 5));
+        tasks.add(new Task("5", "Yeah", 7));
+        tasks.add(new Task("6", "Right", 9));
 
+        ArrayList<Task> tasks2 = new ArrayList<>();
+
+        for (Task t : tasks){
+            if (t.getPriority() >= 3){
+                tasks2.add(t);
+            }
+        }
+
+        tasks2.sort(Comparator.comparingInt(Task::getPriority).reversed());
+        for (Task t : tasks2){
+            System.out.println(t.getPriority());
+        }
     }
 
     static public void activity15(){
